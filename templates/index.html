@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 align="center">ZippyAssist</h1>
+    <body align="center" width="1">
+        <p align="center" width="1">{{result}}</p>
+        <form align="center" action="" method="get">
+            <input 
+                type="text" 
+                name="message"
+                placeholder="How can we help?">
+            <input type="submit" value="Send">
+        </form>
+    </body>
+{% endblock %}

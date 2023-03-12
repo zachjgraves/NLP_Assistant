@@ -1,0 +1,92 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hello", "How are you?", "Hi there", "Hi", "Whats up", "help", "assistance"],
+     "responses": ["G'day mate! How can I help today?", "Hi! Is there something I can help you with?"]
+    },
+    {"tag": "name",
+     "patterns": ["what's your name?", "what are you called?", "who are you?"],
+     "responses": ["My name is Zippy", "I'm Zippy", "Zippy"]
+    },
+    {"tag": "goodbye",
+     "patterns": [ "bye", "g2g", "see ya", "adios", "cya", "goodbye", "later"],
+     "responses": ["G'day!", "Till next time!", "Later!", "Caio!"]
+    },
+    {"tag": "thanks",
+     "patterns": ["thank you", "I appreciate", "Thanks", "thx"],
+     "responses": [ "No problem, let me know if there is anything else I can help with!", "Of course! Let me know if you need more assistance!"]
+    },
+    {"tag": "no",
+     "patterns": ["No", "nope", "nu-uh", "no sir", "no ma'am", "nah"],
+     "responses": ["Shoot, this seems to be harder than we thought... You can try describing the issue again, or go HERE for more information."]
+    },
+    {"tag": "yes",
+     "patterns": ["Yes", "yes", "yeah", "yup", "yah", "yessir", "yu-huh"],
+     "responses": ["Shoot, this seems to be harder than we thought... You can try describing the issue again, or go HERE for more information."]
+    },
+    {"tag": "urgent",
+     "patterns": ["emergency", "ASAP", "urgent"],
+     "responses": ["If this is an urgent, please go HERE."]   
+    },
+  
+    {"tag": "repair",
+     "patterns": ["the vending machine is broken", "the snack machine doesn't work", "coffee dispenser is out of order", "fix", "fixed", "broke", "broken"],
+     "responses": [ "That's not good! To report required repairs go HERE.", "Oops! Head HERE to report necessary repairs."]
+    },
+    {"tag": "suggestion",
+     "patterns": ["I have a suggestion","could you stock snickers", "could I get some coffee", "There are not enough mint options"],
+     "responses": [ "If you have a suggestion, you can go HERE!"]
+    },
+    {"tag": "stock",
+     "patterns": ["you are out of coke", "we need more water", "There is no more snickers!", "stock", "stocked", "request"],
+     "responses": [ "If you have a stock request, you can go HERE!"]
+    },
+   
+    {"tag": "payment",
+     "patterns": ["I am trying to pay", "won't accept payment", "I cannot pay", "the vending machine stole my cash", "I lost my money", "ate my cash"],
+     "responses": [ "Is this a payment issue? Did you use credit or cash?"] 
+    },
+  
+    {"tag": "credit",
+     "patterns": ["credit card reader didn't work", "credit card thing broken", "Cards won't work", "Credit", "card"],
+     "responses": [ "This might be a credit card issue. Did you tap or swipe your card?"]
+    },
+    {"tag": "tap",
+     "patterns": ["I tapped my card and it didn't work", "tap is broken", "tap", "tapped", "Tap"],
+     "responses": ["Credit card Tap seems to be the issue. You can try swiping your card, or go HERE for more information."]
+    },
+    {"tag": "swipe",
+     "patterns": ["Swiped my card and it didn't work", "swipe is broken", "swipe", "swiped", "swipped", "Swipe"],
+     "responses": ["Credit card seems to be out of service. You can try cash, or go HERE for more information."]
+    },
+ 
+    {"tag": "preAuth",
+     "patterns": ["I was charged $10", "$5", "$10 deduction for $1.5 chocolate", "The machine charged me twice 10 dollars instead of just 5"],
+     "responses": ["Not to worry! This seems to be a PreAuth issue. Head HERE and we'll take of that for you."]
+    },
+  
+    {"tag": "cash",
+     "patterns": ["Stole my cash", "stole money", "Cash", "cash"],
+     "responses": ["Shoot, cash issues are no good. Type 'refund' for a refund or 'repair' to report a broken machine."]
+    },
+ 
+    {"tag": "greeting.sp",
+     "patterns": ["Hola", "buenas", "Buenos días", "buen día", "Buenas tardes", "Buenas noches", "español", "spanish"],  
+     "responses": ["Hola! Cómo puedo ayudarle?" ]
+    },
+
+    {"tag": "name.sp",
+    "patterns":["Cómo te llamas", "Cuál es tu nombre", "Cómo se llama"],
+    "responses":["Soy Zippy!", "Zippy", "Me llamo Zippy. Mucho, gusto."]
+    },
+
+    {"tag": "refund",
+              "patterns": ["the vending machine stole my cash", "I lost my money", "I want a refund"],
+              "responses": [ "Go here for a refund"]
+             },
+
+    {"tag": "feedback",
+             "patterns": ["I want to give feedback"],
+             "responses": [ "Go here for a refund"]
+            }
+]
+}
