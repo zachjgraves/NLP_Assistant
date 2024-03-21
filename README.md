@@ -4,6 +4,15 @@ This Vending Machine Assistant was built with a custom sequential model using Ke
 
 The model is trained using the **intents.json** file. Customize this file to create your own NLP!
 
+### Modify intents:
+
+{"tag": "greeting",
+     "patterns": ["Hello", "How are you?", "Hi there", "Hi", "Whats up", "help", "assistance"],
+     "responses": ["G'day mate! How can I help today?", "Hi! Is there something I can help you with?"]
+    },
+
+Customize responses to common patterns.
+
 ### Dependencies
 
 Flask, json, nltk, numpy, tensorflow.keras
