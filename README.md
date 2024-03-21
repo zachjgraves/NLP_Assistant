@@ -1,51 +1,41 @@
-# NLP_Assistant
+# Natural Language Processing Vending Machine Assistant
 
-This Vending Machine Assistant was built with a custom sequential model using Keras's Sequenstial API.
+## Overview
+The Vending Machine Assistant is a custom sequential model built using Keras's Sequential API. It facilitates natural language processing (NLP) tasks specifically tailored for interactions with vending machines. Users can customize the model by modifying the intents.json file to create their own NLP interactions.
 
-The model is trained using the **intents.json** file. Customize this file to create your own NLP!
+## Model Description
+Sequential Model
+- The model is constructed using Keras's Sequential API, allowing for the stacking of layers sequentially.
+Dense Layers
+- The model consists of Dense layers with varying numbers of units and ReLU activation functions.
+- Dropout layers are incorporated to prevent overfitting by randomly setting a fraction of input units to zero during training.
+Output Layer
+- The final layer is a Dense layer with softmax activation, suitable for multi-class classification problems.
 
-### Modify intents:
+## Dependencies
+- Flask
+- json
+- nltk
+- numpy
+- tensorflow.keras
 
-{"tag": "greeting",
+## Training
+- The model is compiled using the Adam optimizer with a categorical cross-entropy loss function.
+- During training, the model monitors accuracy and adjusts weights accordingly.
+- Training data (train_X and train_y) is fed into the model via model.fit(), specifying the number of epochs and other parameters.
+
+## Summary
+- print(model.summary()) provides a comprehensive overview of the model architecture, including the number of parameters in each layer and the total number of parameters in the model.
+
+
+## Customization
+- Users can customize intents in the intents.json file to tailor NLP interactions according to specific vending machine contexts.
+- Responses to common patterns can be modified to enhance user engagement and satisfaction.
+- {"tag": "greeting",
      "patterns": ["Hello", "How are you?", "Hi there", "Hi", "Whats up", "help", "assistance"],
      "responses": ["G'day mate! How can I help today?", "Hi! Is there something I can help you with?"]
     },
 
-Customize responses to common patterns.
-
-### Dependencies
-
-Flask, json, nltk, numpy, tensorflow.keras
-
-### Model Descrition:
-
-**Sequential Model:**
-
-This model is created using Keras's Sequential API, which allows you to stack layers sequentially.
-
-**Dense Layers:**
-
-The first layer is a Dense layer with 128 units. It uses the ReLU (Rectified Linear Activation) activation function, which introduces non-linearity to the model. input_shape is the shape of the input data expected by the model.
-The second layer is a Dropout layer with a dropout rate of 0.5. Dropout is a regularization technique used to prevent overfitting by randomly setting a fraction of input units to zero during training.
-The third layer is another Dense layer with 64 units and ReLU activation.
-The fourth layer is another Dropout layer with a dropout rate of 0.3.
-The final layer is a Dense layer with output_shape units and softmax activation. The softmax activation is commonly used for multi-class classification problems as it normalizes the output into a probability distribution over the classes.
-Optimizer: The model is compiled using the Adam optimizer (tf.keras.optimizers.Adam). Adam is an adaptive learning rate optimization algorithm that is well-suited for training deep neural networks.
-
-**Loss Function:**
-
-The categorical cross-entropy loss function ('categorical_crossentropy') is used, which is commonly used for multi-class classification problems.
-
-**Metrics:** 
-
-The model will monitor accuracy during training.
-
-**Summary:**
-
-print(model.summary()) prints out a summary of the model architecture, including the number of parameters in each layer and the total number of parameters in the model.
-
-**Training:**
-
-model.fit() is used to train the model. It takes the training data (train_X and train_y), specifies the number of epochs (200 in this case), and other parameters such as batch size and verbosity.
-
-Overall, this model is designed for multi-class classification tasks, likely with input data of shape input_shape and output data of shape output_shape. The model architecture includes two hidden layers with dropout regularization to prevent overfitting, and it's optimized using the Adam optimizer with a high initial learning rate (0.01).
+## Conclusion
+The Vending Machine Assistant leverages deep learning techniques to enhance user interactions with vending machines. By providing a customizable NLP framework, users can create tailored experiences that cater to diverse vending machine scenarios, ultimately improving user satisfaction and efficiency.
+This Vending Machine Assistant was built with a custom sequential model using Keras's Sequenstial API.
